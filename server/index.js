@@ -5,6 +5,7 @@ const {
   getAllTasks,
   insertUsers,
   insertTasks,
+  deleteTask
 } = require("./db/queries");
 
 const app = express();
@@ -39,12 +40,14 @@ app.post("/users", async function (req, res) {
   res.status(201).send(addedUser);
 });
 
+// Get all tasks
 app.get("/tasks", async function (req, res) {
   const tasks = await getAllTasks();
   console.log(tasks);
   res.status(200).send(tasks);
 });
 
+// Create a task
 app.post("/tasks", async function (req, res) {
   const task = req.body;
 
@@ -59,10 +62,14 @@ app.post("/tasks", async function (req, res) {
   res.status(200).send(addedTask);
 });
 
+// Delete a task
 app.delete("/tasks/:id", async function (req, res) {
-  const taskId = req.params.id;
+  const taskIdString = req.params.id;
+  const taskIdInt = parseInt(taskIdString)
 
-  console.log(taskId);
+  const deletedTask = await deleteTask(taskIdInt);
+
+  res.status(204).send(deletedTask)
 });
 
 app.listen(port, function () {

@@ -27,16 +27,19 @@ function createTask(tasks) {
     const updatebutton = document.createElement("button");
     const deletecell = document.createElement("td");
     const deletebutton = document.createElement("button");
+    const deleteicon = document.createElement("i");
 
     checkboxinput.setAttribute("type", "checkbox");
     checkboxinput.setAttribute("class", "checkbox");
 
-    updatebutton.setAttribute("class", "btn btn-primary btn-xs");
+    updatebutton.setAttribute("class", "btn btn-outline btn-xs");
     updatebutton.innerText = "Update";
 
-    deletebutton.setAttribute("class", "btn btn-error btn-xs");
-    deletebutton.innerText = "Delete";
-    deletebutton.onclick = deleteTask;
+    deletebutton.setAttribute("class", "btn btn-outline btn-xs");
+    deletebutton.onclick = () => deleteTask(tasks[i].tid);
+    deleteicon.setAttribute("class", "fa-solid fa-trash");
+
+    deletebutton.appendChild(deleteicon)
 
     taskcell.innerText = tasks[i].taskname;
 
