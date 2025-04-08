@@ -1,6 +1,11 @@
 const express = require("express");
 const cors = require("cors");
-const { getAllUsers, getAllTasks, insertUsers, insertTasks } = require("./db/queries");
+const {
+  getAllUsers,
+  getAllTasks,
+  insertUsers,
+  insertTasks,
+} = require("./db/queries");
 
 const app = express();
 const port = 3000;
@@ -52,7 +57,12 @@ app.post("/tasks", async function (req, res) {
   const addedTask = await insertTasks(task);
 
   res.status(200).send(addedTask);
+});
 
+app.delete("/tasks/:id", async function (req, res) {
+  const taskId = req.params.id;
+
+  console.log(taskId);
 });
 
 app.listen(port, function () {

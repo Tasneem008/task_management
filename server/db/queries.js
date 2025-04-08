@@ -23,9 +23,15 @@ async function insertTasks(task) {
     [task.userid, task.iscompleted, task.taskname]
   );
 }
+
+async function deleteTask(taskId) {
+  await pool.query("DELETE FROM tasks WHERE tid=$1", [taskId]);
+}
+
 module.exports = {
   getAllUsers,
   insertUsers,
   getAllTasks,
   insertTasks,
+  deleteTask,
 };
