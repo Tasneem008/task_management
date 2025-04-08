@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Management</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./src/index.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar bg-white/20 fixed top-0 shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-white/20 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li><a>Home</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <a href="index.html" class="btn btn-ghost"
+          ><i class="fa-solid fa-house"></i>Home</a
+        >
+      </div>
+
+      <div class="navbar-end space-x-3 mr-2">
+        <a href="./src/views/login.html" class="btn btn-ghost">Login</a>
+        <a href="./src/views/register.html" class="btn btn-ghost">Sign Up</a>
+      </div>
+    </div>
+
+    <div
+      class="hero bg-linear-to-r from-indigo-400 via-orange-200 to-rose-400 min-h-screen"
+    >
+      <div class="hero-overlay"></div>
+      <div class="hero-content flex-col">
+        <div class="text-center lg:text-left">
+          <h1 class="text-5xl font-bold mb-5">Tasks</h1>
+          <p class="py-2 text-center">Blah Blah</p>
+        </div>
+        <div
+          class="card mb-20 bg-white/25 w-xl rounded-2xl shrink-0 shadow-2xl"
+        >
+          <div class="card-body">
+            <form id="task-form" class="flex items-center gap-2 justify-center">
+              <input
+                type="text"
+                class="w-full input rounded-xl"
+                placeholder="Add a Task"
+                name="task"
+                required
+              />
+
+              <button type="submit" class="btn btn-active rounded-2xl">
+                Add
+              </button>
+            </form>
+
+            <div class="overflow-x-auto">
+              <table class="table">
+                <!-- head -->
+                <tbody id="task-container">
+                  <!-- row 1 -->
+                  <!-- <tr>
+                    <td>
+                      <label>
+                        <input type="checkbox" class="checkbox" />
+                      </label>
+                    </td>
+                    <td>task1</td>
+                    <td>
+                      <button class="btn btn-primary btn-xs ">Update</button>
+                    </td>
+                   
+                    <th>
+                      <button class="btn btn-error btn-xs"><i class="fa-solid fa-trash"></i></button>
+                    </th>
+                  </tr> -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
