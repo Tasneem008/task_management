@@ -17,6 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <div class="navbar bg-white/20 shadow-sm">
@@ -45,7 +46,6 @@
             <li><a>Home</a></li>
           </ul>
         </div>
-       
       </div>
       <div>
         <a href="" class="btn btn-ghost"
@@ -59,59 +59,38 @@
       </div>
     </div>
 
-    <div class="hero bg-linear-to-r from-indigo-400 via-orange-200 to-rose-400  min-h-screen">
+    <div
+      class="hero bg-linear-to-r from-indigo-400 via-orange-200 to-rose-400 min-h-screen"
+    >
       <div class="hero-overlay"></div>
       <div class="hero-content flex-col">
         <div class="text-center lg:text-left">
-          <h1 class="text-5xl font-bold mb-5 ">Tasks</h1>
-          <p class="py-2  text-center">
-           Blah Blah
-          </p>
+          <h1 class="text-5xl font-bold mb-5">Tasks</h1>
+          <p class="py-2 text-center">Blah Blah</p>
         </div>
-        <div class="card mb-20 bg-white/25 w-xl rounded-2xl shrink-0 shadow-2xl">
+        <div
+          class="card mb-20 bg-white/25 w-xl rounded-2xl shrink-0 shadow-2xl"
+        >
           <div class="card-body">
-            <div class="flex items-center gap-2 justify-center">
-             
-              <input type="text" class="w-full input rounded-xl" placeholder="Add a Task" />
-              
-              
-              <button class="btn btn-active rounded-2xl">Add</button>
-            </div>
+            <form id="task-form" class="flex items-center gap-2 justify-center">
+              <input
+                type="text"
+                class="w-full input rounded-xl"
+                placeholder="Add a Task"
+                name="task"
+                required
+              />
+
+              <button type="submit" class="btn btn-active rounded-2xl">
+                Add
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Task Table
 ID--primary key

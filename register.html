@@ -17,6 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="./register.js" defer></script>
   </head>
   <body>
     <div class="navbar bg-base-100 shadow-sm border-2">
@@ -62,23 +63,23 @@
         <div class="hero-overlay"></div>
         <div class="hero-content text-neutral-content text-center">
           <div class="card backdrop-blur-sm text-black bg-white/10 w-95 h-135 rounded-md">
-              <div class="card-body justify-center items-center">
+              <form id="register-form" class="card-body justify-center items-center">
                   <h3 class="text-xl ">Register</h3>
                 <fieldset class="fieldset w-80">
                   <label class="fieldset-label text-base ">First Name</label>
-                  <input type="First Name" class="input " placeholder="Email" />
+                  <input type="First Name" class="input " placeholder="First Name" name="firstname" required />
                   <label class="fieldset-label text-base ">Last Name</label>
-                  <input type="Last Name" class="input " placeholder="Email" />
+                  <input type="Last Name" class="input " placeholder="Last Name" name="lastname" required />
                   <label class="fieldset-label text-base ">Email</label>
-                  <input type="email" class="input " placeholder="Email" />
+                  <input type="email" class="input " placeholder="Email" name="email" required />
                   <label class="fieldset-label text-base ">Password</label>
-                  <input type="password" class="input " placeholder="Password" />
+                  <input type="password" class="input " placeholder="Password" name="password" required />
                   <label class="fieldset-label text-base ">Confirm Password</label>
-                  <input type="Confirm Password" class="input" placeholder="Email" />
+                  <input type="password" class="input" placeholder="Confirm Password" name="confirmpassword" required />
                   
-                  <button class="btn btn-neutral mt-4">Register</button>
+                  <button type="submit" class="btn btn-neutral mt-4">Register</button>
                 </fieldset>
-              </div>
+              </form>
             </div>
               
              
